@@ -1,0 +1,50 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+
+    <persistence-unit name="CISNUX">
+
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <!-- Entity Classes -->
+        <class>dev.cisnux.javajpa.entity.Customer</class>
+        <class>dev.cisnux.javajpa.entity.Category</class>
+        <class>dev.cisnux.javajpa.entity.Product</class>
+        <class>dev.cisnux.javajpa.entity.Brand</class>
+        <class>dev.cisnux.javajpa.entity.User</class>
+        <class>dev.cisnux.javajpa.entity.Wallet</class>
+        <class>dev.cisnux.javajpa.entity.Credential</class>
+        <class>dev.cisnux.javajpa.entity.Name</class>
+        <class>dev.cisnux.javajpa.entity.DepartmentId</class>
+        <class>dev.cisnux.javajpa.entity.Image</class>
+        <class>dev.cisnux.javajpa.entity.Department</class>
+        <class>dev.cisnux.javajpa.entity.Member</class>
+        <class>dev.cisnux.javajpa.entity.Payment</class>
+        <class>dev.cisnux.javajpa.entity.GopayPayment</class>
+        <class>dev.cisnux.javajpa.entity.CreditCardPayment</class>
+        <class>dev.cisnux.javajpa.entity.Employee</class>
+        <class>dev.cisnux.javajpa.entity.Manager</class>
+        <class>dev.cisnux.javajpa.entity.VicePresident</class>
+        <class>dev.cisnux.javajpa.entity.Transaction</class>
+        <class>dev.cisnux.javajpa.entity.CreditTransaction</class>
+        <class>dev.cisnux.javajpa.entity.DebitTransaction</class>
+        <class>dev.cisnux.javajpa.entity.AuditableEntity</class>
+
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <!--            <property name="jakarta.persistence.jdbc.url"-->
+            <!--                      value="jdbc:postgresql://localhost:5432/example_test"/>-->
+            <property name="jakarta.persistence.jdbc.url"
+                      value="jdbc:postgresql://localhost:5432/example"/>
+            <property name="jakarta.persistence.jdbc.user" value="developer"/>
+            <property name="jakarta.persistence.jdbc.password" value="@Fajrapredator12"/>
+            <!--            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>-->
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.dialect" value="dev.cisnux.javajpa.utils.CustomPostgresDialect"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>
